@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MpesaMaven:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MpesaMaven_jar</output-path>
+    <root id="archive" name="MpesaMaven.jar">
+      <element id="module-output" name="MpesaMaven" />
+      <element id="module-test-output" name="MpesaMaven" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.9.0/okhttp-3.9.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20171018/json-20171018.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
