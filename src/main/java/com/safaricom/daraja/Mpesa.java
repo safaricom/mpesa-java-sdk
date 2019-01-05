@@ -1,12 +1,14 @@
-
-import okhttp3.*;
-import org.json.*;
+package com.safaricom.daraja;
 
 import java.io.IOException;
 import java.util.Base64;
 
+import org.json.*;
+
+import okhttp3.*;
+
 public class Mpesa {
-    String appKey;
+        String appKey;
     String appSecret;
     public Mpesa(String app_key, String app_secret){
         appKey=app_key;
@@ -318,6 +320,8 @@ public class Mpesa {
         System.out.println(response.body().string());
         return response.body().string();
     }
+
+    
     public static void main(String[] args) throws IOException {
         Mpesa m=new Mpesa("GvzjNnYgNJtwgwfLBkZh65VPwfuKvs0V","oOpJICRVlyrGSAkM");
         m.authenticate();
