@@ -12,7 +12,7 @@ Am currently using this do develop a springboot app and I will add springboot us
   Clone or download the project this git project.<br/>
   open the project in your favourite IDE.( I used Intelij) <br/>
   
-  <H1>Configuration <H1>
+  <H1>Configuration </H1>
   
   By now you have a project opened in your IDE and valid safaricom  API_KEY and API_SECRET.<br/>
   
