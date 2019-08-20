@@ -6,11 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MpesaMaven" />
+        <module name="Mpesa" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="MpesaMaven" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
