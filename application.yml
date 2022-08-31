@@ -1,0 +1,9 @@
+server : 
+  port : 8080
+mpesa : 
+  daraja :
+    consumer-key : //replace with ur consumer key
+    consumer-secret : //replace with ur consumer secret
+    grant-type : client_credentials
+    oauth-endpoint : https://sandbox.saricom.co.ke/oauth/v1/generate
+    
