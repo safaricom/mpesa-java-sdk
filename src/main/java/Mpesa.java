@@ -335,4 +335,37 @@ public class Mpesa {
         return response.body().string();
     }
 
+    public String dynamicQR(String trxCode, String creditPartyIdentifier, String merchantName, double amount, String refNo) throws IOException{
+        JSONArray jsonArray=new JSONArray();
+        JSONObject jsonObject=new JSONObject();
+        jsonObject.put("MerchantName", merchantName);
+        jsonObject.put("RefNo", refNo);
+        jsonObject.put("Amount", amount);
+        jsonObject.put("TrxCode", trxCode);
+        jsonObject.put("CPI", creditPartyIdentifier);
+
+        jsonArray.put(jsonObject);
+
+        String requestJson=jsonArray.toString().replaceAll("[\\[\\]]","");
+        System.out.println(requestJson);
+
+        OkHttpClient client = new OkHttpClient();
+
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, requestJson);
+
+        Request request = new Request.Builder()
+                .url("https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query")
+                .post(body)
+                .addHeader("content-type", "application/json")
+                .addHeader("authorization", "Bearer "+authenticate())
+                .addHeader("cache-control", "no-cache")
+                .build();
+
+        Response response = client.newCall(request).execute();
+        System.out.println(response.body().string());
+        return response.body().string();
+    }
+
+
 }
